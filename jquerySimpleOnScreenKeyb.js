@@ -8,7 +8,7 @@
     var elem = this;
 
     var defaults = {
-      chars: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6','7','8','9','0','<-','LO'],
+      chars: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6','7','8','9','0','<span class="glyphicon glyphicon-chevron-left"></span>','<span class="glyphicon glyphicon-arrow-down"></span>'],
       keys: {
         38 : "nextChar",
         40 : "prevChar",
@@ -80,9 +80,9 @@
               currText = currText.slice(0,-1)
             } else if(currCharPos == defaults.chars.length-1) {
               toLower = !toLower;
-              var text = "LO";
+              var text = '<span class="glyphicon glyphicon-arrow-down"></span>';
               if(toLower == true) {
-                text = "UP";
+                text = '<span class="glyphicon glyphicon-arrow-up"></span>';
               }
               defaults.chars[defaults.chars.length-1] = text;
               displayChar(currCharPos);
