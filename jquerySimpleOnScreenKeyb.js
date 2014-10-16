@@ -23,6 +23,12 @@
 
     var toLower = false;
 
+    var popover = $(elem).popover({
+        "content" : "",
+        "trigger" : "manual",
+        "title" : "Select char"
+      })
+
 
 
     // append some html to the box
@@ -35,12 +41,12 @@
     });
 
     elem.focusin(function() {
-      $('#jqSimpleOnScreenKeybWrapper').show();
+      $(elem).popover("show");
       displayChar(currCharPos);
     });
 
     elem.blur(function() {
-      $('#jqSimpleOnScreenKeybWrapper').hide();
+      $(elem).popover('hide');
     });
 
 
@@ -108,7 +114,7 @@
     * Display the current char
     */
     var displayChar = function() {
-      $('#jqSimpleOnScreenKeybWrapper .content').text(getCurrentChar());
+      $(elem).data('bs.popover').tip().find(".popover-content").html(getCurrentChar());
     };
 
     return this;

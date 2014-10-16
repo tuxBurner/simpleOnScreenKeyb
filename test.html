@@ -10,21 +10,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-    <style>
-      .jqSimpleOnScreenKeybWrapper {
-        height: 150px;
-        width: 150px;
-        display: none;
-      }
-
-      .jqSimpleOnScreenKeybWrapper .content {
-        font-size: 100px;
-        text-align: center;
-        font-weight: bold;
-      }
-
-    </style>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -36,9 +21,8 @@
 
 
     <input type="text" name="testInput" id="test"/>
-    <div  id="jqSimpleOnScreenKeybWrapper" class="jqSimpleOnScreenKeybWrapper alert alert-info">
-      <div class="content">A</div>
-    </div>
+    <input type="text" name="testInput" id="test2"/>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
@@ -49,6 +33,7 @@
     <script>
       $(function() {
         $('#test').simpleOnScreenKeyb();
+        $('#test2').simpleOnScreenKeyb();
       });
     </script>
 
