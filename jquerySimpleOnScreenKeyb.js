@@ -47,7 +47,7 @@
     
     elem.focusout(function() {
       $(elem).popover('hide');
-    }
+    });
 
 
     elem.blur(function() {
