@@ -44,6 +44,11 @@
       $(elem).popover("show");
       displayChar(currCharPos);
     });
+    
+    elem.focusout(function() {
+      $(elem).popover('hide');
+    }
+
 
     elem.blur(function() {
       $(elem).popover('hide');
